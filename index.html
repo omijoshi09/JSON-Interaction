@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Start of header block -->
+<head>
+    <meta charset="UTF-8">
+    <title>Search | Nobel Prize Winners</title>
+    <!-- Declare external stylesheet -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- # Resources - https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css -->
+    <!-- Declare external stylesheet -->
+</head>
+<!-- end of header block -->
+<body>
+    <!-- main wrapper for the body -->
+    <div class="main-wrapper">
+        <!-- header block -->
+        <div class="header-block">
+            <h2>Search for the <span style="color: #ffcc00">Noble Prize Winners</span>.</h2>
+            <div class="filters">
+                <br><br>
+                <!-- Select Start Year -->
+                <label class="filter-label" for="year-list-start">Start Year:</label>
+                <select id="year-list-start">
+                    <option value="" disabled selected>Please select start year</option>
+                </select>
+                <!-- Select End Year -->
+                <label class="filter-label" for="year-list-end">End Year:</label>
+                <select id="year-list-end">
+                    <option value="" disabled selected>Please select end year</option>
+                </select>
+                <!-- Select Category -->
+                <label class="filter-label" for="category-value">Category:</label>
+                <select id="category-value">
+                    <option value="" disabled selected>Please select category</option>
+                </select>
+                <!-- Search button -->
+                <button id="search-btn" onclick="filterResult()"><i class="fa fa-search" style="color: white" aria-hidden="true"></i></button>
+                <br><br><br>
+                <!-- Radio buttons for gender selection -->
+                <div id="gender-block">
+                    <label class="filter-label" >Gender:</label>
+                    <input type="radio" name="gender" value="male" id="male-val"> Male
+                    <input type="radio" name="gender" value="female" id="female-val" > Female
+                    <input type="radio" name="gender"  value="both" id="both-val"  > Both
+                </div>
+            </div>
+        </div>
+        <!-- Filtered table start -->
+        <table id="table-value">
+            <tr>
+                <th>Year</th>
+                <th>Category</th>
+                <th>Winners & Motivation Award</th>
+            </tr>
+        </table>
+        <!-- Filtered table End -->
+    </div>
+    <!-- end of main wrapper for the body -->
+
+    <!-- #Reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog -->
+    <!-- Dialog -->
+    <dialog id="myFirstDialog" >
+        <div class="details">
+            <h3 id="dialog_person">Details About:</h3>
+            <hr>
+            <p id="yob">Year of Birth: </p>
+            <p id="yod">Year of Death: </p>
+            <p id="cob">City of Birth: </p>
+
+            <!-- Filtered table start -->
+            <table id="dialog-table">
+                <tr>
+                    <th>Category</th>
+                    <th>Motivation</th>
+                    <th>Affiliations</th>
+                </tr>
+            </table>
+            <!-- Filtered table End -->
+
+            <div style="text-align: center;"><button id="hide" onclick="close_dialog()">Close</button></div>
+        </div>
+    </dialog>
+    <!-- End of Dialog -->
+
+    <!-- external js file -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- external js file -->
+
+</body>
+</html>
+
+
+<!--Resources:-->
+<!--
+https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
+https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
+https://medium.com/front-end-weekly/stop-array-foreach-and-start-using-filter-map-some-reduce-functions-298b4dabfa09
+https://stackoverflow.com/questions/38517373/trying-to-apply-a-filter-to-a-nested-array-full-of-objects
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+https://www.w3schools.com/
+https://stackoverflow.com/
+https://developer.mozilla.org/bm/docs/Web/JavaScript
+-->
